@@ -1,1 +1,375 @@
-# bithday-surprise-for-Rahi-bbz
+<!DOCTYPE html>
+<!-- saved from url=(0101)file:///C:/Users/Rahat/AppData/Local/Temp/Rar$EXa10480.26129.rartemp/animation-page-master/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday My Love</title>
+  <script src="./Happy Birthday My Love_files/saved_resource"></script>
+  <link href="./Happy Birthday My Love_files/css2" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      background: radial-gradient(circle at top, #ffdde8, #ffe9f2, #ffd1dc, #17001f);
+    }
+    .font-love { font-family: 'Pacifico', cursive; }
+
+    .heart {
+      position: fixed;
+      bottom: -40px;
+      color: rgba(255, 70, 130, 0.8);
+      animation: floatHeart linear infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+    @keyframes floatHeart {
+      0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+      15% { opacity: 1; }
+      100% { transform: translateY(-115vh) rotate(360deg) scale(1.8); opacity: 0; }
+    }
+
+    .sparkle {
+      position: fixed;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 0 15px white;
+      animation: sparkle 2s infinite ease-in-out;
+      z-index: 2;
+      pointer-events: none;
+    }
+    @keyframes sparkle {
+      0%, 100% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.3); opacity: 1; }
+    }
+
+    .step {
+      display: none;
+      animation: popIn .8s ease forwards;
+    }
+    .step.active { display: block; }
+    @keyframes popIn {
+      from { opacity: 0; transform: translateY(35px) scale(.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 25px 60px rgba(121, 0, 65, 0.28);
+    }
+
+    .gift-box {
+      width: 150px;
+      height: 115px;
+      background: linear-gradient(135deg, #ff3f8f, #ff8fb8);
+      border-radius: 18px;
+      position: relative;
+      margin: 0 auto;
+      animation: bounceGift 1.5s infinite;
+      cursor: pointer;
+      box-shadow: 0 20px 45px rgba(255, 45, 130, .45);
+    }
+    .gift-box::before {
+      content: '';
+      position: absolute;
+      width: 28px;
+      height: 115px;
+      background: #fff4b8;
+      left: 61px;
+      top: 0;
+    }
+    .gift-box::after {
+      content: '';
+      position: absolute;
+      width: 170px;
+      height: 28px;
+      background: #fff4b8;
+      left: -10px;
+      top: 42px;
+    }
+    .gift-lid {
+      width: 175px;
+      height: 38px;
+      background: linear-gradient(135deg, #ff1f7a, #ff72aa);
+      border-radius: 16px;
+      position: absolute;
+      top: -35px;
+      left: -12px;
+      transition: .5s ease;
+    }
+    .gift-box.open .gift-lid {
+      transform: rotate(-25deg) translate(-35px, -45px);
+    }
+    @keyframes bounceGift {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .balloon {
+      position: absolute;
+      width: 60px;
+      height: 78px;
+      border-radius: 50% 50% 45% 45%;
+      animation: balloonFloat 4s ease-in-out infinite;
+      z-index: 0;
+    }
+    .balloon::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 90px;
+      background: rgba(255,255,255,.6);
+      left: 50%;
+      top: 76px;
+    }
+    @keyframes balloonFloat {
+      0%,100% { transform: translateY(0) rotate(-3deg); }
+      50% { transform: translateY(-28px) rotate(4deg); }
+    }
+
+    .typing {
+      border-right: 3px solid #ff2e83;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3.5s steps(40), blink .7s infinite;
+    }
+    @keyframes typing { from { width: 0; } to { width: 100%; } }
+    @keyframes blink { 50% { border-color: transparent; } }
+
+    .cake {
+      position: relative;
+      width: 210px;
+      height: 135px;
+      margin: 0 auto;
+    }
+    .cake-base {
+      position: absolute;
+      bottom: 0;
+      width: 210px;
+      height: 85px;
+      background: linear-gradient(180deg, #ff78ad, #ff2f86);
+      border-radius: 18px 18px 28px 28px;
+      box-shadow: 0 18px 35px rgba(255, 47, 134, .38);
+    }
+    .cake-top {
+      position: absolute;
+      bottom: 70px;
+      width: 210px;
+      height: 40px;
+      background: #fff7fb;
+      border-radius: 50%;
+    }
+    .candle {
+      position: absolute;
+      bottom: 105px;
+      left: 96px;
+      width: 18px;
+      height: 45px;
+      background: repeating-linear-gradient(45deg, #fff, #fff 6px, #ff4d94 6px, #ff4d94 12px);
+      border-radius: 8px;
+    }
+    .flame {
+      position: absolute;
+      bottom: 146px;
+      left: 95px;
+      width: 20px;
+      height: 30px;
+      background: radial-gradient(circle, #fff7a1 20%, #ffb300 60%, #ff4d00 100%);
+      border-radius: 50% 50% 50% 50%;
+      animation: flame .25s infinite alternate;
+      transform-origin: bottom;
+    }
+    @keyframes flame {
+      from { transform: scale(1) rotate(-3deg); }
+      to { transform: scale(1.15) rotate(3deg); }
+    }
+
+    .confetti {
+      position: fixed;
+      top: -20px;
+      width: 10px;
+      height: 16px;
+      animation: confettiFall 3s linear forwards;
+      z-index: 40;
+    }
+    @keyframes confettiFall {
+      to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+
+    .shake { animation: shake .45s ease; }
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      25% { transform: translateX(-8px); }
+      75% { transform: translateX(8px); }
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.bottom-16{bottom:4rem}.bottom-20{bottom:5rem}.left-1\/4{left:25%}.left-4{left:1rem}.left-8{left:2rem}.right-1\/4{right:25%}.right-10{right:2.5rem}.top-20{top:5rem}.top-28{top:7rem}.top-4{top:1rem}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-7{margin-bottom:1.75rem}.mb-8{margin-bottom:2rem}.mt-10{margin-top:2.5rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.flex{display:flex}.hidden{display:none}.h-72{height:18rem}.min-h-\[560px\]{min-height:560px}.min-h-screen{min-height:100vh}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-xl{max-width:36rem}.items-center{align-items:center}.justify-center{justify-content:center}.overflow-hidden{overflow:hidden}.rounded-3xl{border-radius:1.5rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.border{border-width:1px}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.border-white\/25{border-color:rgb(255 255 255 / 0.25)}.bg-pink-400{--tw-bg-opacity:1;background-color:rgb(244 114 182 / var(--tw-bg-opacity, 1))}.bg-pink-600{--tw-bg-opacity:1;background-color:rgb(219 39 119 / var(--tw-bg-opacity, 1))}.bg-purple-400{--tw-bg-opacity:1;background-color:rgb(192 132 252 / var(--tw-bg-opacity, 1))}.bg-red-400{--tw-bg-opacity:1;background-color:rgb(248 113 113 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/15{background-color:rgb(255 255 255 / 0.15)}.bg-white\/20{background-color:rgb(255 255 255 / 0.2)}.bg-white\/25{background-color:rgb(255 255 255 / 0.25)}.bg-yellow-300{--tw-bg-opacity:1;background-color:rgb(253 224 71 / var(--tw-bg-opacity, 1))}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-8{line-height:2rem}.tracking-\[\.35em\]{letter-spacing:.35em}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-black\/90{color:rgb(0 0 0 / 0.9)}.text-black\/95{color:rgb(0 0 0 / 0.95)}.text-pink-100{--tw-text-opacity:1;color:rgb(252 231 243 / var(--tw-text-opacity, 1))}.text-pink-600{--tw-text-opacity:1;color:rgb(219 39 119 / var(--tw-text-opacity, 1))}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.drop-shadow-lg{--tw-drop-shadow:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-125:hover{--tw-scale-x:1.25;--tw-scale-y:1.25;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-pink-700:hover{--tw-bg-opacity:1;background-color:rgb(190 24 93 / var(--tw-bg-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:p-10{padding:2.5rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-7xl{font-size:4.5rem;line-height:1}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}</style></head>
+<body class="min-h-screen flex items-center justify-center px-4 text-black relative">
+  <div class="balloon bg-pink-400 left-8 top-20"></div>
+  <div class="balloon bg-purple-400 right-10 top-28" style="animation-delay:1s"></div>
+  <div class="balloon bg-yellow-300 left-1/4 bottom-16" style="animation-delay:2s"></div>
+  <div class="balloon bg-red-400 right-1/4 bottom-20" style="animation-delay:.5s"></div>
+
+  <main class="relative z-10 w-full max-w-3xl">
+    <div class="glass rounded-[2rem] p-6 sm:p-10 text-center min-h-[560px] flex items-center justify-center">
+      <section class="step active w-full" data-step="0">
+        <p class="uppercase tracking-[.35em] text-sm text-black mb-4">A tiny surprise for you</p>
+        <h1 class="font-love text-5xl sm:text-7xl text-black drop-shadow-lg mb-6">Hey Beautiful</h1>
+        <p class="text-lg sm:text-xl text-black/90 max-w-xl mx-auto mb-8">Today is not just another day. It is the day my favorite person came into this world.</p>
+        <button onclick="nextStep()" class="bg-white text-pink-600 px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 active:scale-95 transition">Open Your Surprise 💝</button>
+      </section>
+
+      <section class="step w-full" data-step="1">
+        <h2 class="font-love text-4xl sm:text-6xl mb-5">First, catch my heart</h2>
+        <p class="mb-6 text-black/90">Click the floating heart 5 times to unlock your birthday wish.</p>
+        <div class="relative h-72 rounded-3xl bg-white/15 overflow-hidden border border-white/20" id="heartGame">
+          <button id="catchHeart" class="absolute text-5xl hover:scale-125 transition">💖</button>
+          <div class="absolute left-4 top-4 bg-white/25 px-4 py-2 rounded-full">Caught: <span id="score">0</span>/5</div>
+        </div>
+      </section>
+
+      <section class="step w-full" data-step="2">
+        <h2 class="font-love text-4xl sm:text-6xl mb-7 text-transform: uppercase;">A Gift For You</h2>
+        <p class="mb-10 text-black/90 ">Tap the gift box gently.</p>
+        <div class="gift-box" onclick="openGift(this)">
+          <div class="gift-lid"></div>
+        </div>
+        <p id="giftMessage" class="hidden mt-10 text-2xl font-semibold text-black">Inside this gift is my love, my prayers, and my forever smile for you. 🥺❤️</p>
+      </section>
+
+      <section class="step w-full" data-step="3">
+        
+        <div class="cake mb-8">
+          <div class="flame" id="flame"></div>
+          <div class="candle"></div>
+          <div class="cake-top"></div>
+          <div class="cake-base"></div>
+        </div>
+        <p class="mb-6 text-black/90">Click the candle flame to blow it out.</p>
+        <button onclick="blowCandle()" class="bg-pink-600 hover:bg-pink-700 text-black px-8 py-4 rounded-full font-bold shadow-xl transition">Blow Candle 🕯️</button>
+      </section>
+
+      <section class="step w-full" data-step="4">
+        <p class="uppercase tracking-[.35em] text-sm text-pink-100 mb-4">Final Message</p>
+        <h2 class="font-love text-5xl sm:text-7xl mb-6">Happy Birthday My Love 🎂</h2>
+        <div class="max-w-2xl mx-auto text-left bg-white/20 rounded-3xl p-6 border border-white/25">
+          <p class="text-lg leading-8 text-black/95">
+            On your special day, I just want to say that you are one of the most beautiful blessings in my life. Your smile makes my world softer, your presence makes my heart peaceful, and your love makes every day feel special.
+          </p>
+          <p class="text-lg leading-8 text-black/95 mt-4">
+            May Allah bless you with endless happiness, health, success, love, and every dream your heart silently prays for. I am so lucky to have you. ❤️
+          </p>
+        </div>
+        <button onclick="restartWish()" class="mt-8 bg-white text-pink-600 px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 active:scale-95 transition">Replay Magic ✨</button>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    let currentStep = 0;
+    let score = 0;
+    const steps = document.querySelectorAll('.step');
+    const catchHeart = document.getElementById('catchHeart');
+    const heartGame = document.getElementById('heartGame');
+    const scoreEl = document.getElementById('score');
+
+    function showStep(index) {
+      steps.forEach(step => step.classList.remove('active'));
+      steps[index].classList.add('active');
+      currentStep = index;
+      if (index === 1) moveHeart();
+      if (index === 4) launchConfetti();
+    }
+
+    function nextStep() {
+      showStep(currentStep + 1);
+    }
+
+    function createFloatingHearts() {
+      setInterval(() => {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.innerHTML = ['❤️','💖','💕','💗','💘'][Math.floor(Math.random() * 5)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = (18 + Math.random() * 28) + 'px';
+        heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 8000);
+      }, 350);
+    }
+
+    function createSparkles() {
+      for (let i = 0; i < 35; i++) {
+        const sp = document.createElement('div');
+        sp.className = 'sparkle';
+        sp.style.left = Math.random() * 100 + 'vw';
+        sp.style.top = Math.random() * 100 + 'vh';
+        sp.style.animationDelay = Math.random() * 3 + 's';
+        document.body.appendChild(sp);
+      }
+    }
+
+    function moveHeart() {
+      const maxX = heartGame.clientWidth - 70;
+      const maxY = heartGame.clientHeight - 70;
+      catchHeart.style.left = Math.random() * maxX + 'px';
+      catchHeart.style.top = Math.random() * maxY + 'px';
+    }
+
+    catchHeart.addEventListener('click', () => {
+      score++;
+      scoreEl.textContent = score;
+      catchHeart.classList.add('shake');
+      setTimeout(() => catchHeart.classList.remove('shake'), 450);
+      if (score >= 5) {
+        setTimeout(() => showStep(2), 500);
+      } else {
+        moveHeart();
+      }
+    });
+
+    function openGift(box) {
+      box.classList.add('open');
+      document.getElementById('giftMessage').classList.remove('hidden');
+      launchConfetti(50);
+      setTimeout(() => showStep(3), 2500);
+    }
+
+    function blowCandle() {
+      document.getElementById('flame').style.display = 'none';
+      launchConfetti(120);
+      setTimeout(() => showStep(4), 1200);
+    }
+
+    function launchConfetti(amount = 100) {
+      const colors = ['#ff4d94', '#fff176', '#7c4dff', '#00e5ff', '#ffffff', '#ff1744'];
+      for (let i = 0; i < amount; i++) {
+        const c = document.createElement('div');
+        c.className = 'confetti';
+        c.style.left = Math.random() * 100 + 'vw';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.animationDelay = Math.random() * 1.2 + 's';
+        c.style.animationDuration = (2 + Math.random() * 2.5) + 's';
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), 4500);
+      }
+    }
+
+    function restartWish() {
+      score = 0;
+      scoreEl.textContent = '0';
+      document.getElementById('flame').style.display = 'block';
+      document.getElementById('giftMessage').classList.add('hidden');
+      document.querySelector('.gift-box').classList.remove('open');
+      showStep(0);
+    }
+
+    createFloatingHearts();
+    createSparkles();
+  </script><div class="sparkle" style="left: 4.4845vw; top: 53.3757vh; animation-delay: 2.68363s;"></div><div class="sparkle" style="left: 94.0472vw; top: 67.7006vh; animation-delay: 0.563953s;"></div><div class="sparkle" style="left: 33.4358vw; top: 45.7607vh; animation-delay: 2.18193s;"></div><div class="sparkle" style="left: 84.3381vw; top: 43.6226vh; animation-delay: 0.0367339s;"></div><div class="sparkle" style="left: 59.4417vw; top: 1.23867vh; animation-delay: 2.78836s;"></div><div class="sparkle" style="left: 51.0384vw; top: 19.4296vh; animation-delay: 1.18299s;"></div><div class="sparkle" style="left: 68.7463vw; top: 28.6977vh; animation-delay: 0.11497s;"></div><div class="sparkle" style="left: 0.0582482vw; top: 55.9397vh; animation-delay: 1.05444s;"></div><div class="sparkle" style="left: 16.7554vw; top: 49.0354vh; animation-delay: 0.0457959s;"></div><div class="sparkle" style="left: 85.2863vw; top: 33.217vh; animation-delay: 1.24229s;"></div><div class="sparkle" style="left: 91.9522vw; top: 58.2417vh; animation-delay: 2.14916s;"></div><div class="sparkle" style="left: 81.6201vw; top: 39.5738vh; animation-delay: 0.915443s;"></div><div class="sparkle" style="left: 56.5628vw; top: 88.3445vh; animation-delay: 2.56383s;"></div><div class="sparkle" style="left: 59.7207vw; top: 80.3874vh; animation-delay: 0.775845s;"></div><div class="sparkle" style="left: 86.7046vw; top: 3.66321vh; animation-delay: 1.31516s;"></div><div class="sparkle" style="left: 54.569vw; top: 57.6482vh; animation-delay: 0.772561s;"></div><div class="sparkle" style="left: 89.7278vw; top: 76.2051vh; animation-delay: 0.0176056s;"></div><div class="sparkle" style="left: 93.8832vw; top: 86.1639vh; animation-delay: 0.941088s;"></div><div class="sparkle" style="left: 95.3954vw; top: 12.4943vh; animation-delay: 0.11143s;"></div><div class="sparkle" style="left: 15.4351vw; top: 44.7722vh; animation-delay: 2.81923s;"></div><div class="sparkle" style="left: 30.6652vw; top: 75.5287vh; animation-delay: 0.364035s;"></div><div class="sparkle" style="left: 41.4634vw; top: 36.6524vh; animation-delay: 1.82621s;"></div><div class="sparkle" style="left: 41.5086vw; top: 56.1277vh; animation-delay: 2.90579s;"></div><div class="sparkle" style="left: 57.2402vw; top: 58.3737vh; animation-delay: 1.43655s;"></div><div class="sparkle" style="left: 51.6879vw; top: 89.2506vh; animation-delay: 2.14522s;"></div><div class="sparkle" style="left: 89.2655vw; top: 28.6499vh; animation-delay: 1.29267s;"></div><div class="sparkle" style="left: 69.2887vw; top: 14.729vh; animation-delay: 0.998636s;"></div><div class="sparkle" style="left: 95.149vw; top: 66.8002vh; animation-delay: 0.568081s;"></div><div class="sparkle" style="left: 10.0787vw; top: 80.5745vh; animation-delay: 1.78843s;"></div><div class="sparkle" style="left: 30.328vw; top: 30.9217vh; animation-delay: 2.01165s;"></div><div class="sparkle" style="left: 62.6562vw; top: 47.0095vh; animation-delay: 0.948494s;"></div><div class="sparkle" style="left: 11.796vw; top: 83.1343vh; animation-delay: 0.0381266s;"></div><div class="sparkle" style="left: 93.352vw; top: 7.67032vh; animation-delay: 0.0373172s;"></div><div class="sparkle" style="left: 19.0037vw; top: 19.1385vh; animation-delay: 0.731904s;"></div><div class="sparkle" style="left: 79.5285vw; top: 69.5802vh; animation-delay: 1.03118s;"></div>
+
+<div class="heart" style="left: 30.2514vw; font-size: 20.9225px; animation-durati
